@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "c0d2d0e7-f6d8-4e70-87c7-30397b17cf17",
+            "Value": {
+                "id": "ece912a0-3afd-496c-b66e-887d9c268b81",
+                "resourcePath": "sprites\\sprRaven\\sprRaven.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c3091b6c-19c3-4f89-b05e-5f88666715dd",
             "Value": {
                 "id": "e2ebaf89-b100-4bde-9944-e178c5ee69c6",
