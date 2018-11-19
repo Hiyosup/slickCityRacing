@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "1c37ba74-f5fc-4f03-b938-710831319fd0",
+            "Value": {
+                "id": "69eba8f5-a2f4-4cbe-9041-b9d9d6e89a3b",
+                "resourcePath": "sprites\\sprFinishTop\\sprFinishTop.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "22832142-4f0c-4019-b24b-e4fe76163cf6",
             "Value": {
                 "id": "d6b5684a-26eb-423e-b226-f7b923394eb2",
@@ -175,6 +183,14 @@
             }
         },
         {
+            "Key": "8699b772-3cce-4e4d-b045-6df8fc76d2fd",
+            "Value": {
+                "id": "ef5713db-77d8-46a6-82c3-5190ccb06019",
+                "resourcePath": "sprites\\sprFinishBottom\\sprFinishBottom.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "94832d6f-cc1d-4de6-b362-a69c326258c5",
             "Value": {
                 "id": "f980c5ba-6662-4796-b482-5fabe1e8951c",
@@ -188,6 +204,14 @@
                 "id": "d6527749-42d1-4900-8938-a169037d9b5d",
                 "resourcePath": "views\\a0482bfe-d1cf-4b8c-9f2b-2559b43640c4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a64c790b-89e4-4a76-b27b-82166b41d0b2",
+            "Value": {
+                "id": "1bc29155-8d49-414a-8af4-fb50bdf799f6",
+                "resourcePath": "objects\\objFinishTop\\objFinishTop.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -299,6 +323,14 @@
             "Value": {
                 "id": "23139315-d5a5-4b8b-9f9d-87abe260e331",
                 "resourcePath": "objects\\objPlayer1\\objPlayer1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "e7ea9a73-2a51-4a56-98fc-d060cf6537a7",
+            "Value": {
+                "id": "12fd035d-d871-44f6-8b8c-6069105cd277",
+                "resourcePath": "objects\\objFinishBottom\\objFinishBottom.yy",
                 "resourceType": "GMObject"
             }
         },
