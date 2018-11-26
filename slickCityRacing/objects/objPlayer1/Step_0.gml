@@ -8,7 +8,6 @@ down = keyboard_check(vk_down);
 xaxis = right - left;
 yaxis = down - up;
 
-
 //direction
 	dir = point_direction(0,0, xaxis,yaxis);
 	
@@ -19,39 +18,34 @@ if(xaxis== 0 )&&(yaxis == 0) {
 	len = spd;
 }
 
-
 //Calculate Where to move
-hspd = lengthdir_x(len,dir );
+hspd = lengthdir_x(len,dir);
 vspd = lengthdir_y(len,dir);
 
 //Move the car
 
 
 //Horizontal Collisions
-if (place_meeting(x +hspd, y, objHorWall)) {
+if (place_meeting(x +hspd, y, objHorWall)) or (place_meeting(x +hspd, y, objVertWall)){
 	while(!place_meeting(x+sign(hspd), y, objHorWall)){
 		x += sign(hspd);
 	}
-	hspd = 0; 
-}	
-if (place_meeting(x +hspd, y, objVertWall)) {
 	while(!place_meeting(x+sign(hspd), y, objVertWall)){
 		x += sign(hspd);
 	}
 	hspd = 0; 
 }	
+
 x += hspd;
 //Vertical Collisions
-if (place_meeting(x, y+vspd, objVertWall)) {
+if (place_meeting(x, y+vspd, objVertWall)) or (place_meeting(x, y+vspd, objHorWall)){
 	while(!place_meeting(x, y+sign(vspd), objVertWall)){
+		x += sign(vspd);
+	}
+	while(!place_meeting(x, y+sign(vspd), objHorWall)){
 		x += sign(vspd);
 	}
 	vspd = 0; 
 }	
-if (place_meeting(x, y+vspd, objHorWall)) {
-	while(!place_meeting(x, y+sign(vspd), objHorWall)){
-		x += sign(vspd);
-	}
-	vspd = 0;
-}	
+
 	y += vspd;
