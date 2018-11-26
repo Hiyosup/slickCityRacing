@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "1c37ba74-f5fc-4f03-b938-710831319fd0",
+            "Value": {
+                "id": "69eba8f5-a2f4-4cbe-9041-b9d9d6e89a3b",
+                "resourcePath": "sprites\\sprFinishTop\\sprFinishTop.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "22832142-4f0c-4019-b24b-e4fe76163cf6",
             "Value": {
                 "id": "d6b5684a-26eb-423e-b226-f7b923394eb2",
@@ -175,10 +183,10 @@
             }
         },
         {
-            "Key": "814bae54-f15e-4c7e-a4d0-76f829e62d64",
+            "Key": "8699b772-3cce-4e4d-b045-6df8fc76d2fd",
             "Value": {
-                "id": "4e9f4e70-0fa6-404d-89ba-6ea8749a16a1",
-                "resourcePath": "sprites\\sprWall\\sprWall.yy",
+                "id": "ef5713db-77d8-46a6-82c3-5190ccb06019",
+                "resourcePath": "sprites\\sprFinishBottom\\sprFinishBottom.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -196,6 +204,14 @@
                 "id": "d6527749-42d1-4900-8938-a169037d9b5d",
                 "resourcePath": "views\\a0482bfe-d1cf-4b8c-9f2b-2559b43640c4.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "a64c790b-89e4-4a76-b27b-82166b41d0b2",
+            "Value": {
+                "id": "1bc29155-8d49-414a-8af4-fb50bdf799f6",
+                "resourcePath": "objects\\objFinishTop\\objFinishTop.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -311,10 +327,10 @@
             }
         },
         {
-            "Key": "eb14166d-0485-4f17-a42f-abc388f5fa6f",
+            "Key": "e7ea9a73-2a51-4a56-98fc-d060cf6537a7",
             "Value": {
-                "id": "85e7c297-2bc5-4a06-9da8-876c2c38b5df",
-                "resourcePath": "objects\\objWall\\objWall.yy",
+                "id": "12fd035d-d871-44f6-8b8c-6069105cd277",
+                "resourcePath": "objects\\objFinishBottom\\objFinishBottom.yy",
                 "resourceType": "GMObject"
             }
         },
