@@ -1,8 +1,8 @@
 {
-    "id": "a45817ea-b210-4d53-906d-360afb416753",
+    "id": "19d83c30-492f-4c5d-bc96-ae8defde3a97",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objOutsideCorner",
+    "name": "objOutsideCornerNW",
     "eventList": [
         
     ],
@@ -24,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": true,
-    "spriteId": "249dbc35-33f0-4210-b86c-8c41fa5152a1",
+    "spriteId": "7faf5180-cc85-4ad9-98c2-361e41ffbd11",
     "visible": true
 }
