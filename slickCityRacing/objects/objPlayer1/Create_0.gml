@@ -3,7 +3,7 @@ accSpd = .4;
 fricSpd = .5;
 turnSpd = 3;
 
-maxReverseSpd = 2;
+maxReverseSpd = 6;
 accReverseSpd = .06;
 turnReverseSpd = 1 ;
 

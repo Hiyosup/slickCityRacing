@@ -46,7 +46,7 @@ if(moving){// if we are moving
 		len = -maxReverseSpd;
 		}		
 	}		
-else {// if we are not moving
+	else {// if we are not moving
 		if (dir == -1) {// if moving forward
 			if (len > 0) {
 				len -= fricSpd;
