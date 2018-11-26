@@ -72,3 +72,10 @@ vspd = lengthdir_y(len, image_angle+90);
 x += hspd;
 y += vspd;
 
+//Horizontal Collitions
+if (place_meeting(x, y+sign(hspd), obj_wall)) {
+	while(!place_meeting(x,y+sign(hspd), y, obj_wall)){
+		x += sign(hspd);
+	}
+	hspd = 0; 
+}	
