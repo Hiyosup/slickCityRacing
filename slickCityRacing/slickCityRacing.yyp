@@ -199,14 +199,6 @@
             }
         },
         {
-            "Key": "3fade1bb-1755-4290-854d-232c170e9684",
-            "Value": {
-                "id": "b772c132-58b2-4e66-bf03-a3a795e00b8e",
-                "resourcePath": "objects\\objPlayer6\\objPlayer6.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "49fc7b38-2a5a-4c5f-99bf-7ef640c9337d",
             "Value": {
                 "id": "34b00494-6fbb-45b5-8385-52b45d788d24",
@@ -391,14 +383,6 @@
             }
         },
         {
-            "Key": "c734f3a2-a2c9-4892-b071-e9eb5e4d43d5",
-            "Value": {
-                "id": "f6768675-d5cc-44be-b0c2-eb2c6aaca924",
-                "resourcePath": "scripts\\script0\\script0.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "317a31e3-9aab-4b8f-93c6-a3e6c6fe03ce",
@@ -447,18 +431,18 @@
             }
         },
         {
-            "Key": "e7ea9a73-2a51-4a56-98fc-d060cf6537a7",
+            "Key": "e327dbbe-9e8c-4c9e-9ffc-09f15e40912d",
             "Value": {
-                "id": "12fd035d-d871-44f6-8b8c-6069105cd277",
-                "resourcePath": "objects\\objFinishBottom\\objFinishBottom.yy",
+                "id": "d9708a07-a166-40dd-8dba-c8990f7bec3e",
+                "resourcePath": "objects\\objMenu\\objMenu.yy",
                 "resourceType": "GMObject"
             }
         },
         {
-            "Key": "f00f60fb-0a12-48d1-8788-9ddd53cb0871",
+            "Key": "e7ea9a73-2a51-4a56-98fc-d060cf6537a7",
             "Value": {
-                "id": "ecf6ec48-2859-470d-8da2-8b96dfa0573a",
-                "resourcePath": "objects\\objPlayer5\\objPlayer5.yy",
+                "id": "12fd035d-d871-44f6-8b8c-6069105cd277",
+                "resourcePath": "objects\\objFinishBottom\\objFinishBottom.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -488,7 +472,7 @@
         }
     ],
     "script_order": [
-        "c734f3a2-a2c9-4892-b071-e9eb5e4d43d5"
+        
     ],
     "tutorial": ""
 }
