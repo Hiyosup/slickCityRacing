@@ -8,6 +8,7 @@ right = keyboard_check(vk_right);
 movement = up - down;
 turning = left - right;
 direction = image_angle + 90;
+
 //turning
 if (speed != 0){
 	if (turning == 1){
@@ -17,6 +18,7 @@ if (speed != 0){
 		image_angle -= (speed / 4);
 	}
 }
+
 //forward and backward movement
 if (movement == 1){
 	speed += acceleration;
@@ -41,8 +43,8 @@ else {
 }
 
 //speed control
-if (speed >= 20){
-	speed = 20;
+if (speed >= topSpeed){
+	speed = topSpeed;
 }
 
 if (speed <= -10){
