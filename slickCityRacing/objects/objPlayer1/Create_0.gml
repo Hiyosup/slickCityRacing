@@ -19,3 +19,7 @@ len = 0;
 moving = false;
 
 spd= 10;
+
+//Track
+trackLap = 0;
+trackPos = 0;
