@@ -58,21 +58,21 @@ or (place_meeting(x + hspeed, y, objOutsideCornerNW)) or (place_meeting(x + hspe
 or (place_meeting(x + hspeed, y, objOutsideCornerSW)){
 	hspeed = hspeed / 2;
 	if (hspeed < 0){
-		x += 8
+		x += bounceDistance
 		if (vspeed < 0){
-			image_angle -= 20
+			image_angle -= bounceAngle
 		}
 		else if (vspeed > 0){
-			image_angle += 20
+			image_angle += bounceAngle
 		}
 	}
 	else if (hspeed > 0){
-		x -= 8
+		x -= bounceDistance
 		if (vspeed < 0){
-			image_angle += 20
+			image_angle += bounceAngle
 		}
 		else if (vspeed > 0){
-			image_angle -= 20
+			image_angle -= bounceAngle
 		}
 	}
 }
@@ -83,21 +83,21 @@ or (place_meeting(x, y + vspeed, objOutsideCornerNW)) or (place_meeting(x, y + v
 or (place_meeting(x, y + vspeed, objOutsideCornerSW)){
 	vspeed = vspeed / 2;
 	if (vspeed < 0){
-		y += 8
+		y += bounceDistance
 		if (hspeed < 0){
-			image_angle += 20
+			image_angle += bounceAngle
 		}
 		else if (hspeed > 0){
-			image_angle -= 20
+			image_angle -= bounceAngle
 		}
 	}
 	else if (vspeed > 0){
-		y -= 8
+		y -= bounceDistance
 		if (hspeed < 0){
-			image_angle -= 20
+			image_angle -= bounceAngle
 		}
 		else if (hspeed > 0){
-			image_angle += 20
+			image_angle += bounceAngle
 		}
 	}
 }
