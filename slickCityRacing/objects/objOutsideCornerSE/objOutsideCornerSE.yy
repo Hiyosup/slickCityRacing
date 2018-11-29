@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "objOutsideCornerSE",
     "eventList": [
-        {
-            "id": "17ab2668-7891-4194-9560-ff18375b0447",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "a45817ea-b210-4d53-906d-360afb416753"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
