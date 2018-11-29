@@ -8,7 +8,8 @@ if (keyboard_check_pressed(vk_down)){
 
 if (keyboard_check_pressed(vk_enter)){
 	if (image_index == 0){
-		room_goto(1);
+		instance_create_layer(x,y,"Text",objVehicleSelect)
+		instance_destroy();
 	}
 	if (image_index == 1){
 		
