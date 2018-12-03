@@ -12,10 +12,10 @@ direction = image_angle + 90;
 //turning
 if (speed != 0){
 	if (turning == 1){
-		image_angle += (speed / 5);
+		image_angle += (speed / 4);
 	}
 	else if (turning == -1){
-		image_angle -= (speed / 5);
+		image_angle -= (speed / 4);
 	}
 }
 
@@ -63,19 +63,31 @@ or (place_meeting(x + hspeed, y, objOutsideCornerSW)){
 	hspeed = hspeed / 2;
 	if (hspeed < 0){
 		x += bounceDistance
-		if (vspeed < 0){
+		if (vspeed < 0) and (place_meeting(x + hspeed, y, objOutsideCornerNW)){
+			image_angle += bounceAngle
+		}
+		else if (vspeed < 0) and (!place_meeting(x + hspeed, y, objOutsideCornerNW)){
 			image_angle -= bounceAngle
 		}
-		else if (vspeed > 0){
+		else if (vspeed > 0) and (place_meeting(x + hspeed, y, objOutsideCornerSW)){
+			image_angle -= bounceAngle
+		}
+		else if (vspeed > 0) and (!place_meeting(x + hspeed, y, objOutsideCornerSW)){
 			image_angle += bounceAngle
 		}
 	}
 	else if (hspeed > 0){
 		x -= bounceDistance
-		if (vspeed < 0){
+		if (vspeed < 0) and (place_meeting(x + hspeed, y, objOutsideCornerNE)){
+			image_angle -= bounceAngle
+		}
+		else if (vspeed < 0) and (!place_meeting(x + hspeed, y, objOutsideCornerNE)){
 			image_angle += bounceAngle
 		}
-		else if (vspeed > 0){
+		else if (vspeed > 0) and (place_meeting(x + hspeed, y, objOutsideCornerSE)){
+			image_angle += bounceAngle
+		}
+		else if (vspeed > 0) and (!place_meeting(x + hspeed, y, objOutsideCornerSE)){
 			image_angle -= bounceAngle
 		}
 	}
@@ -88,19 +100,31 @@ or (place_meeting(x, y + vspeed, objOutsideCornerSW)){
 	vspeed = vspeed / 2;
 	if (vspeed < 0){
 		y += bounceDistance
-		if (hspeed < 0){
+		if (hspeed < 0) and (place_meeting(x, y + vspeed, objOutsideCornerNW)){
+			image_angle -= bounceAngle
+		}
+		else if (hspeed < 0) and (!place_meeting(x, y + vspeed, objOutsideCornerNW)){
 			image_angle += bounceAngle
 		}
-		else if (hspeed > 0){
+		else if (hspeed > 0) and (place_meeting(x, y + vspeed, objOutsideCornerNE)){
+			image_angle += bounceAngle
+		}
+		else if (hspeed > 0) and (!place_meeting(x, y + vspeed, objOutsideCornerNE)){
 			image_angle -= bounceAngle
 		}
 	}
 	else if (vspeed > 0){
 		y -= bounceDistance
-		if (hspeed < 0){
+		if (hspeed < 0) and (place_meeting(x, y + vspeed, objOutsideCornerSW)){
+			image_angle += bounceAngle
+		}
+		else if (hspeed < 0) and (!place_meeting(x, y + vspeed, objOutsideCornerSW)){
 			image_angle -= bounceAngle
 		}
-		else if (hspeed > 0){
+		else if (hspeed > 0) and (place_meeting(x, y + vspeed, objOutsideCornerSE)){
+			image_angle -= bounceAngle
+		}
+		else if (hspeed > 0) and (!place_meeting(x, y + vspeed, objOutsideCornerSE)){
 			image_angle += bounceAngle
 		}
 	}
