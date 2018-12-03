@@ -1,8 +1,6 @@
 //inputs
-up = 0;
-down = 0;
-left = 0;
-right = 0;
+up = 0
+down = 0
 
 //active variables
 movement = up - down;
@@ -128,4 +126,33 @@ or (place_meeting(x, y + vspeed, objOutsideCornerSW)){
 			image_angle += bounceAngle
 		}
 	}
+}
+
+if (pointOn1 == false){
+	mp_potential_step(obj_Goal.x, obj_Goal.y, 10, false);
+	if (place_meeting(x, y, obj_Goal)){
+		pointOn1 = true;
+	}
+	if (x < obj_Goal.x){
+		if (abs(x - obj_Goal.x) > abs(y - obj_Goal.y)){
+			if (y - obj_Goal <= 0){
+				image_angle += 5
+			}
+			else if (y - obj_Goal >= 0){
+				image_angle -= 5
+			}
+		}
+	}
+}
+
+if (pointOn1 == true) and (pointOn2 == false){
+	mp_potential_step(obj_Goal1.x, obj_Goal1.y, 10, false);
+	if (place_meeting(x, y, obj_Goal1)){
+		pointOn2 = true;
+	}
+}
+
+if (pointOn1 == true) and (pointOn2 == true){
+	pointOn1 = false;
+	pointOn2 = false;
 }

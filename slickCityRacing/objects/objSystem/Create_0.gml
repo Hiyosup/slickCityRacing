@@ -19,3 +19,8 @@ optionSelect = 0;
 optionInitialize = 0;
 creditsOn = false;
 soundOn = "Yes";
+
+global.P1lap =0;
+global.P1Chck = false;
+global.P1Chck1 = false;
+global.P1Chck2 =false;

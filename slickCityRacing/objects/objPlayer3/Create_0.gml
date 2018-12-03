@@ -8,6 +8,8 @@ vSlide = 0;
 hSlide = 0;
 bounceAngle = 45;
 bounceDistance = 16;
+left = 0;
+right = 0;
 
 //Vehicle color
 switch (global.player1){
@@ -37,3 +39,11 @@ switch (global.player1){
 		sprite_index = sprRaven;
 		break;
 }
+
+global.veh3Path = path_add();
+path_add_point(global.veh3Path,obj_Goal.x,obj_Goal.y,100);
+path_add_point(global.veh3Path,obj_Goal1.x,obj_Goal1.y,100);
+path_add_point(global.veh3Path,x,y,100);
+
+pointOn1 = false;
+pointOn2 = false;
