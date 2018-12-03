@@ -12,7 +12,7 @@ if (keyboard_check_pressed(vk_enter)){
 		instance_destroy();
 	}
 	if (image_index == 1){
-		
+		instance_destroy();
 	}
 	if (image_index == 2){
 		game_end();

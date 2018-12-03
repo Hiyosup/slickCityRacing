@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "0f1c30b2-8f3f-48ca-8d92-126d7063bb11",
+            "Value": {
+                "id": "287c053f-501b-4d79-9a13-bdc1f9a1e2be",
+                "resourcePath": "sprites\\sprPixelForge\\sprPixelForge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "10159d1e-3b9c-47eb-b7c0-9d0279c4fee0",
             "Value": {
                 "id": "04c1cc87-4192-4af5-ae94-b8cc710bb633",
@@ -340,6 +348,14 @@
                 "id": "f980c5ba-6662-4796-b482-5fabe1e8951c",
                 "resourcePath": "views\\94832d6f-cc1d-4de6-b362-a69c326258c5.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "96527809-8660-4e3c-a62e-3eb12f137ab9",
+            "Value": {
+                "id": "a9803c9d-6bce-494b-bd16-d04f431cac5c",
+                "resourcePath": "objects\\objPixelForge\\objPixelForge.yy",
+                "resourceType": "GMObject"
             }
         },
         {

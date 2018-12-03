@@ -12,10 +12,10 @@ direction = image_angle + 90;
 //turning
 if (speed != 0){
 	if (turning == 1){
-		image_angle += (speed / 5);
+		image_angle += (speed / 4);
 	}
 	else if (turning == -1){
-		image_angle -= (speed / 5);
+		image_angle -= (speed / 4);
 	}
 }
 
