@@ -60,7 +60,7 @@ if (!instance_exists(objMenuText)) and (instance_exists(objMenu)){
 	if (creditsOn == true){
 		draw_text_color(room_width/2, room_height/2-64, "Programmed by: Kale McSpadden and Kevin Molina", $00CCCC, $00CCCC, $00CCCC, $00CCCC, 1);
 		draw_text_color(room_width/2, room_height/2, "Art and Animations by: Kale McSpadden", $00CCCC, $00CCCC, $00CCCC, $00CCCC, 1);
-		draw_text_color(room_width/2, room_height/2+64, "Music and Sound by:Kevin Molina", $00CCCC, $00CCCC, $00CCCC, $00CCCC, 1);
+		draw_text_color(room_width/2, room_height/2+64, "Music and Sound by: Kevin Molina", $00CCCC, $00CCCC, $00CCCC, $00CCCC, 1);
 		if (keyboard_check_pressed(vk_anykey)) and (optionInitialize >= 1){
 			creditsOn = false;
 			optionInitialize = 0;
