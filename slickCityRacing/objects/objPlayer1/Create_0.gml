@@ -8,7 +8,7 @@ frict = .075;
 vSlide = 0;
 hSlide = 0;
 bounceAngle = 45;
-bounceDistance = 16;
+bounceDistance = 32;
 
 //Vehicle color
 switch (global.player1){
