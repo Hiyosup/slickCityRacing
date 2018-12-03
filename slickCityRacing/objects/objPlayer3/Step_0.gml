@@ -1,7 +1,7 @@
 //inputs
 up = 0;
-down =0;
-left =0;
+down = 0;
+left = 0;
 right = 0;
 
 //active variables
@@ -128,10 +128,4 @@ or (place_meeting(x, y + vspeed, objOutsideCornerSW)){
 			image_angle += bounceAngle
 		}
 	}
-}
-if (instance_exists(objGoal)){
-	mp_linear_step(objGoal.x, objGoal.y, 6, false );
-if (instance_exists(objGoal1)){
-	mp_linear_step(objGoal1.x, objGoal1.y, 6, false );
-}
 }

@@ -5,7 +5,7 @@ switch (room){
 		break;
 }
 
-if (!instance_exists(objMenuText)) and (instance_exists(objMenu)){
+if (!instance_exists(objMenuText)) and (instance_exists(objMenu)) and (!instance_exists(objVehicleSelect)){
 	if (optionInitialize < 1){
 		optionSelect = 0;
 		optionInitialize += .1;
