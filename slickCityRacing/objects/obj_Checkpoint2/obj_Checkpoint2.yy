@@ -5,13 +5,13 @@
     "name": "obj_Checkpoint2",
     "eventList": [
         {
-            "id": "3f413602-daac-4fbb-931b-be64fafc65b3",
+            "id": "26e370cc-bd1f-4fcd-ba6d-6b8cd12d7417",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 0,
+            "eventtype": 3,
             "m_owner": "0730a3af-1f01-455b-afdd-f54ffec0aae1"
         }
     ],

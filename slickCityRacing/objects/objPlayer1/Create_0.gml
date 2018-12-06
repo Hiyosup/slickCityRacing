@@ -38,6 +38,3 @@ switch (global.player1){
 		sprite_index = sprCardinal;
 		break;
 }
-
-get_name = true;
-active = true;
