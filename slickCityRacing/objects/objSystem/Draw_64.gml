@@ -1,8 +1,10 @@
 switch (room){
 	case (rmTrack1):
 		draw_set_halign(fa_left);
-		draw_text_color(vx, vy + 728, "Speed: " + string(global.player1Speed), $FF99FF, $FF99FF, $FF99FF, $FF99FF, 1)
-		draw_text(vx, vy, "Lap: " + string(global.P1lap));
+		draw_text_color(vx, vy + 694, "Speed: " + string(global.player1Speed), $FF99FF, $FF99FF, $FF99FF, $FF99FF, 1)
+		draw_text(vx, vy + 662, "Lap: " + string(global.P1lap));
+		
+		//starting the race
 		draw_set_halign(fa_center);
 		draw_set_valign(fa_center);
 		if (global.raceStarting < .33){
@@ -16,6 +18,56 @@ switch (room){
 		}
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_top);
+		
+		//timer function
+		if (global.timeCount == true) and (global.P1lap < global.maxLaps){
+			global.second += 1/room_speed;
+		}
+		if (global.second >= 60){
+			global.second = 0;
+			global.minute += 1;
+		}
+		if (global.minute >= 60){
+			global.minute = 0;
+			global.hour += 1;
+		}
+		//timer display
+		if (global.hour < 10){
+			if (global.minute < 10){
+				if (global.second < 10){
+					draw_text_color(vx, vy + 728, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+				}
+				else {
+					draw_text_color(vx, vy + 728, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+				}
+			}
+			else {
+				if (global.second < 10){
+					draw_text_color(vx, vy + 728, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+				}
+				else {
+					draw_text_color(vx, vy + 728, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+				}
+			}
+		}
+		else {
+			if (global.minute < 10){
+				if (global.second < 10){
+					draw_text_color(vx, vy + 728, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+				}
+				else {
+					draw_text_color(vx, vy + 728, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+				}
+			}
+			else {
+				if (global.second < 10){
+					draw_text_color(vx, vy + 728, "Timer " + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+				}
+				else {
+					draw_text_color(vx, vy + 728, "Timer " + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+				}
+			}
+		}
 		break;
 }
 

@@ -24,6 +24,7 @@ optionInitialize = 0;
 creditsOn = false;
 soundOn = "Yes";
 
+//laps
 global.P1lap = 0;
 global.P1Chck = false;
 global.P1Chck1 = false;
@@ -32,3 +33,11 @@ global.P2lap = 0;
 global.P2Chck = false;
 global.P2Chck1 = false;
 global.P2Chck2 =false;
+
+global.maxLaps = 1;
+
+//timer
+global.hour = 0;
+global.minute = 0;
+global.second = 0;
+global.timeCount = false;
