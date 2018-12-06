@@ -39,3 +39,5 @@ switch (global.player1){
 		break;
 }
 
+get_name = true;
+active = true;

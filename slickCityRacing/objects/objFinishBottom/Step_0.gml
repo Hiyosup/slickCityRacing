@@ -9,3 +9,7 @@ with (all){
 }
 
 global.raceStarting = image_alpha;
+
+if (image_alpha == 1){
+	global.count_up = true
+}

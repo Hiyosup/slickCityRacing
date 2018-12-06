@@ -359,6 +359,14 @@
             }
         },
         {
+            "Key": "7bd4ec72-2af9-4ad3-8250-04530dd3632b",
+            "Value": {
+                "id": "cff76dfc-923d-4f54-821f-441491c6e5a7",
+                "resourcePath": "objects\\obj_CountUpController\\obj_CountUpController.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7ca6b198-94e7-41d0-bf31-af86aec9fe39",
             "Value": {
                 "id": "247f51f1-c0a8-42a7-b497-b5e86408b01f",
