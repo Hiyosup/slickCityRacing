@@ -1,3 +1,4 @@
+//Initial variables
 movement = 0;
 turning = 0;
 acceleration = .5;
@@ -7,33 +8,33 @@ frict = .075;
 vSlide = 0;
 hSlide = 0;
 bounceAngle = 45;
-bounceDistance = 16;
+bounceDistance = 32;
 
 //Vehicle color
-switch (global.player1){
+switch (global.player2){
 	case (0):
-		sprite_index = sprRaven;
+		sprite_index = sprEagle;
 		show_debug_message("Eagle")
 		break;
 	
 	case (1):
-		sprite_index = sprEagle;
+		sprite_index = sprRaven;
 		show_debug_message("Raven")
 		break;
 	
 	case (2):
-		sprite_index = sprParakeet;
-		break;
-	
-	case (3):
 		sprite_index = sprSwan;
 		break;
 	
+	case (3):
+		sprite_index = sprParakeet;
+		break;
+	
 	case (4):
-		sprite_index = sprCardinal;
+		sprite_index = sprOriole;
 		break;
 	
 	case (5):
-		sprite_index = sprOriole;
+		sprite_index = sprCardinal;
 		break;
 }

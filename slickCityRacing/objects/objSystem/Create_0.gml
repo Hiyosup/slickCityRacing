@@ -2,9 +2,11 @@ global.raceStarting = 0;
 
 //Speedometer
 global.player1Speed = 0;
+global.player2Speed = 0;
 
 //Vehicle select
 global.player1 = 0;
+global.player2 = 0;
 
 //Game font
 draw_set_font(fntPrimary)
@@ -22,7 +24,7 @@ optionInitialize = 0;
 creditsOn = false;
 soundOn = "Yes";
 
-global.P1lap =0;
+global.P1lap = 0;
 global.P1Chck = false;
 global.P1Chck1 = false;
 global.P1Chck2 =false;
