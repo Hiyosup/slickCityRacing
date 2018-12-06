@@ -7,3 +7,5 @@ with (all){
 		image_alpha = 1
 	}
 }
+
+global.raceStarting = image_alpha;

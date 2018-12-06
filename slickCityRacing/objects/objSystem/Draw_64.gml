@@ -3,6 +3,19 @@ switch (room){
 		draw_set_halign(fa_left);
 		draw_text_color(vx, vy + 728, "Speed: " + string(global.player1Speed), $FF99FF, $FF99FF, $FF99FF, $FF99FF, 1)
 		draw_text(vx, vy, "Lap: " + string(global.P1lap));
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_center);
+		if (global.raceStarting < .33){
+			draw_text_transformed_color(vx+512, vy+384, "3", 6, 6, 0, $00CCCC, $00CCCC, $00CCCC, $00CCCC, 1)
+		}
+		if (global.raceStarting < .66) and (global.raceStarting >= .33){
+			draw_text_transformed_color(vx+512, vy+384, "2", 6, 6, 0, $00CCCC, $00CCCC, $00CCCC, $00CCCC, 1)
+		}
+		if (global.raceStarting < .99)  and (global.raceStarting >= .66){
+			draw_text_transformed_color(vx+512, vy+384, "1", 6, 6, 0, $00CCCC, $00CCCC, $00CCCC, $00CCCC, 1)
+		}
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);
 		break;
 }
 

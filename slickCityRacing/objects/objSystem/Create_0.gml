@@ -1,8 +1,10 @@
+global.raceStarting = 0;
+
 //Speedometer
-global.player1Speed = 0
+global.player1Speed = 0;
 
 //Vehicle select
-global.player1 = 0
+global.player1 = 0;
 
 //Game font
 draw_set_font(fntPrimary)
