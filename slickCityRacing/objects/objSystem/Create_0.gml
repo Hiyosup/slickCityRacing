@@ -28,3 +28,7 @@ global.P1lap = 0;
 global.P1Chck = false;
 global.P1Chck1 = false;
 global.P1Chck2 =false;
+global.P2lap = 0;
+global.P2Chck = false;
+global.P2Chck1 = false;
+global.P2Chck2 =false;
