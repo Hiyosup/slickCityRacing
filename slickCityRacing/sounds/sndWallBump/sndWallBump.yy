@@ -1,5 +1,5 @@
 {
-    "id": "017dc8b1-6d1b-40fd-9f04-fac697cd12bd",
+    "id": "ee2552bf-c024-42fd-82ef-dbdd8f9cd0bd",
     "modelName": "GMSound",
     "mvc": "1.0",
     "name": "sndWallBump",

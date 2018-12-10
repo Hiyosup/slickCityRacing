@@ -42,3 +42,9 @@ switch (global.player2){
 if (global.playerNumber == 0){
 	instance_destroy();
 }
+if (global.playerNumber == 1){
+	engineForward = audio_play_sound(sndEnginev2, 1, true);
+	engineBackward = audio_play_sound(sndEnginev3, 1, true);
+	engineStart = audio_play_sound(sndEngineStart, 1, false);
+	engineStop = audio_play_sound(sndEngineShutdown, 1, false);
+}

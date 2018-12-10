@@ -1,3 +1,9 @@
+if (image_alpha != 1){
+	audio_pause_sound(engineForward);
+	audio_pause_sound(engineStart);
+	audio_pause_sound(engineStop);
+	audio_pause_sound(engineBackward);
+}
 if (image_alpha == 1){
 	//inputs
 	up = keyboard_check(ord("W"));
@@ -19,8 +25,63 @@ if (image_alpha == 1){
 		else if (turning == -1){
 			image_angle -= (speed / 3);
 		}
+		//sound
+		if (speed*9 < 120) and (speed*9 > -45) and (audio_is_paused(engineStart)){
+			if (up) or (down){
+				audio_resume_sound(engineStart);
+				if (audio_is_playing(engineForward)){
+					audio_pause_sound(engineForward);
+				}
+				if (audio_is_playing(engineBackward)){
+					audio_pause_sound(engineBackward);
+				}
+			}
+		}
+		else if (speed*9 < 120) and (speed*9 > -45) and (audio_is_paused(engineStop)){
+			if (!up) and (!down){
+				audio_resume_sound(engineStop);
+				if (audio_is_playing(engineForward)){
+					audio_pause_sound(engineForward);
+				}
+				if (audio_is_playing(engineBackward)){
+					audio_pause_sound(engineBackward);
+				}
+			}
+		}
+		if (speed*9 > 120) and (audio_is_paused(engineForward)){
+			audio_resume_sound(engineForward);
+			if (audio_is_playing(engineStart)){
+				audio_pause_sound(engineStart);
+			}
+			if (audio_is_playing(engineStop)){
+				audio_pause_sound(engineStop);
+			}
+		}
+		if (speed*9 < -45) and (audio_is_paused(engineBackward)){
+			audio_resume_sound(engineBackward);
+			if (audio_is_playing(engineStart)){
+				audio_pause_sound(engineStart);
+			}
+			if (audio_is_playing(engineStop)){
+				audio_pause_sound(engineStop);
+			}
+		}
 	}
-
+	else {
+		if (audio_is_playing(engineForward)){
+			audio_pause_sound(engineForward);
+		}
+		if (audio_is_playing(engineStart)){
+			audio_pause_sound(engineStart);
+		}
+		if (audio_is_playing(engineStop)){
+			audio_pause_sound(engineStop);
+		}
+		if (audio_is_playing(engineBackward)){
+			audio_pause_sound(engineBackward);
+		}
+	}
+	
 	//forward and backward movement
 	if (movement == 1){
 		speed += acceleration - frict;
@@ -63,6 +124,7 @@ if (image_alpha == 1){
 	or (place_meeting(x + hspeed, y, objOutsideCornerNW)) or (place_meeting(x + hspeed, y, objOutsideCornerSE))
 	or (place_meeting(x + hspeed, y, objOutsideCornerSW)){
 		hspeed = hspeed / 2;
+		audio_play_sound(sndWallBump,1,false)
 		if (hspeed < 0){
 			x += bounceDistance
 			if (vspeed < 0) and (place_meeting(x + hspeed, y, objOutsideCornerNW)){
@@ -100,6 +162,7 @@ if (image_alpha == 1){
 	or (place_meeting(x, y + vspeed, objOutsideCornerNW)) or (place_meeting(x, y + vspeed, objOutsideCornerSE))
 	or (place_meeting(x, y + vspeed, objOutsideCornerSW)){
 		vspeed = vspeed / 2;
+		audio_play_sound(sndWallBump,1,false)
 		if (vspeed < 0){
 			y += bounceDistance
 			if (hspeed < 0) and (place_meeting(x, y + vspeed, objOutsideCornerNW)){

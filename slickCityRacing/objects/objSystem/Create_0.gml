@@ -1,4 +1,5 @@
 global.raceStarting = 0;
+goSaid = false;
 
 //Speedometer
 global.player1Speed = 0;

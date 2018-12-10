@@ -17,13 +17,28 @@ switch (room){
 		draw_set_valign(fa_center);
 		if (global.raceStarting < .33){
 			draw_text_transformed_color(vx+512, vy+384, "3", 6, 6, 0, $00CCCC, $00CCCC, $00CCCC, $00CCCC, 1)
+			if (!audio_is_playing(snd_3)){
+				audio_play_sound(snd_3,1,false)
+			}
 		}
 		if (global.raceStarting < .66) and (global.raceStarting >= .33){
 			draw_text_transformed_color(vx+512, vy+384, "2", 6, 6, 0, $00CCCC, $00CCCC, $00CCCC, $00CCCC, 1)
+			if (!audio_is_playing(snd_2)){
+				audio_play_sound(snd_2,1,false)
+			}
 		}
 		if (global.raceStarting < .99)  and (global.raceStarting >= .66){
 			draw_text_transformed_color(vx+512, vy+384, "1", 6, 6, 0, $00CCCC, $00CCCC, $00CCCC, $00CCCC, 1)
+			if (!audio_is_playing(snd_1)){
+				audio_play_sound(snd_1,1,false)
+			}
 		}
+		if(global.raceStarting >= .99) and (goSaid == false){
+			if (!audio_is_playing(sndGo)){
+				audio_play_sound(sndGo,1,false)
+				goSaid = true;
+			}
+		}		
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_top);
 		
@@ -189,6 +204,7 @@ if (p1Finished == true) and (p2Finished == true) and (room != rmMain){
 	global.minute = 0;
 	global.second = 0;
 	optionInitialize = 0;
+	goSaid = false;
 	room_goto(rmMain);
 }
 if (p1Finished == true) and (global.playerNumber == 0) and (room != rmMain){
@@ -198,6 +214,7 @@ if (p1Finished == true) and (global.playerNumber == 0) and (room != rmMain){
 	global.minute = 0;
 	global.second = 0;
 	optionInitialize = 0;
+	goSaid = false;
 	room_goto(rmMain);
 }
 if (room == rmMain) and (!instance_exists(objPixelForge)) and (!instance_exists(objGMS2Splash)) and (!instance_exists(objSAESplash)) and (!instance_exists(objMenu)) and (!instance_exists(objMenuText)){

@@ -1,3 +1,9 @@
+if (image_alpha != 1){
+	audio_pause_sound(engineForward);
+	audio_pause_sound(engineStart);
+	audio_pause_sound(engineStop);
+	audio_pause_sound(engineBackward);
+}
 if (image_alpha == 1){
 	//inputs
 	up = keyboard_check(vk_up);
@@ -20,37 +26,59 @@ if (image_alpha == 1){
 			image_angle -= (speed / 3);
 		}
 		//sound
-		if (speed*9 < 120) and (!audio_is_playing(sndEngineStart)) and (up){
-			audio_play_sound(sndEngineStart, 1, false);
-			if (audio_is_playing(sndEnginev2)){
-				audio_stop_sound(sndEnginev2)
+		if (speed*9 < 120) and (speed*9 > -45) and (audio_is_paused(engineStart)){
+			if (up) or (down){
+				audio_resume_sound(engineStart);
+				if (audio_is_playing(engineForward)){
+					audio_pause_sound(engineForward);
+				}
+				if (audio_is_playing(engineBackward)){
+					audio_pause_sound(engineBackward);
+				}
 			}
 		}
-		else if (speed*9 < 120) and (!audio_is_playing(sndEngineShutdown)) and (!up){
-			audio_play_sound(sndEngineShutdown, 1, false);
-			if (audio_is_playing(sndEnginev2)){
-				audio_stop_sound(sndEnginev2)
+		else if (speed*9 < 120) and (speed*9 > -45) and (audio_is_paused(engineStop)){
+			if (!up) and (!down){
+				audio_resume_sound(engineStop);
+				if (audio_is_playing(engineForward)){
+					audio_pause_sound(engineForward);
+				}
+				if (audio_is_playing(engineBackward)){
+					audio_pause_sound(engineBackward);
+				}
 			}
 		}
-		if (speed*9 > 120) and (!audio_is_playing(sndEnginev2)){
-			audio_play_sound(sndEnginev2,1,true);
-			if (audio_is_playing(sndEngineStart)){
-				audio_stop_sound(sndEngineStart)
+		if (speed*9 > 120) and (audio_is_paused(engineForward)){
+			audio_resume_sound(engineForward);
+			if (audio_is_playing(engineStart)){
+				audio_pause_sound(engineStart);
 			}
-			if (audio_is_playing(sndEngineShutdown)){
-				audio_stop_sound(sndEngineShutdown)
+			if (audio_is_playing(engineStop)){
+				audio_pause_sound(engineStop);
+			}
+		}
+		if (speed*9 < -45) and (audio_is_paused(engineBackward)){
+			audio_resume_sound(engineBackward);
+			if (audio_is_playing(engineStart)){
+				audio_pause_sound(engineStart);
+			}
+			if (audio_is_playing(engineStop)){
+				audio_pause_sound(engineStop);
 			}
 		}
 	}
 	else {
-		if (audio_is_playing(sndEngine)){
-			audio_stop_sound(sndEngine)
+		if (audio_is_playing(engineForward)){
+			audio_pause_sound(engineForward);
 		}
-		if (audio_is_playing(sndEngineStart)){
-			audio_stop_sound(sndEngineStart)
+		if (audio_is_playing(engineStart)){
+			audio_pause_sound(engineStart);
 		}
-		if (audio_is_playing(sndEngineShutdown)){
-			audio_stop_sound(sndEngineShutdown)
+		if (audio_is_playing(engineStop)){
+			audio_pause_sound(engineStop);
+		}
+		if (audio_is_playing(engineBackward)){
+			audio_pause_sound(engineBackward);
 		}
 	}
 
@@ -96,6 +124,7 @@ if (image_alpha == 1){
 	or (place_meeting(x + hspeed, y, objOutsideCornerNW)) or (place_meeting(x + hspeed, y, objOutsideCornerSE))
 	or (place_meeting(x + hspeed, y, objOutsideCornerSW)){
 		hspeed = hspeed / 2;
+		audio_play_sound(sndWallBump,1,false)
 		if (hspeed < 0){
 			x += bounceDistance
 			if (vspeed < 0) and (place_meeting(x + hspeed, y, objOutsideCornerNW)){
@@ -133,6 +162,7 @@ if (image_alpha == 1){
 	or (place_meeting(x, y + vspeed, objOutsideCornerNW)) or (place_meeting(x, y + vspeed, objOutsideCornerSE))
 	or (place_meeting(x, y + vspeed, objOutsideCornerSW)){
 		vspeed = vspeed / 2;
+		audio_play_sound(sndWallBump,1,false)
 		if (vspeed < 0){
 			y += bounceDistance
 			if (hspeed < 0) and (place_meeting(x, y + vspeed, objOutsideCornerNW)){

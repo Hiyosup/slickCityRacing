@@ -74,6 +74,12 @@ with (objPlayer2){
 }
 
 if (room == rmMain){
+	if (audio_is_playing(sndEnginev2)){
+		audio_stop_sound(sndEnginev2)
+	}
+	if (audio_is_playing(sndEnginev3)){
+		audio_stop_sound(sndEnginev3)
+	}
 	if (!audio_is_playing(sndMenu)){
 		audio_play_sound(sndMenu, 1, true)
 	}
