@@ -77,11 +77,25 @@ if (room == rmMain){
 	if (!audio_is_playing(sndMenu)){
 		audio_play_sound(sndMenu, 1, true)
 	}
+	if (audio_is_playing(sndMusic)){
+		audio_stop_sound(sndMusic)
+	}
 	
-	if (keyboard_check_pressed(vk_down)){
+	if (keyboard_check_pressed(vk_down)) or (keyboard_check_pressed(vk_up)){
 		audio_play_sound(sndMenuMove, 1, false)
 	}
-	if (keyboard_check_pressed(vk_up)){
-		audio_play_sound(sndMenuMove, 1, false)
+	
+	if (instance_exists(objVehicleSelect)){
+		if (keyboard_check_pressed(vk_left)) or (keyboard_check_pressed(vk_right)) or
+		(keyboard_check_pressed(ord("W"))) or (keyboard_check_pressed(ord("A"))) or
+		(keyboard_check_pressed(ord("S"))) or (keyboard_check_pressed(ord("D"))){
+			audio_play_sound(sndMenuMove, 1, false)
+		}
+	}
+}
+
+if (room != rmMain){
+	if (audio_is_playing(sndMenu)){
+		audio_stop_sound(sndMenu)
 	}
 }
