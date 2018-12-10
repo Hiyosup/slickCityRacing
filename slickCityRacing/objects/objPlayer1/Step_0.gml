@@ -19,6 +19,39 @@ if (image_alpha == 1){
 		else if (turning == -1){
 			image_angle -= (speed / 3);
 		}
+		//sound
+		if (speed*9 < 120) and (!audio_is_playing(sndEngineStart)) and (up){
+			audio_play_sound(sndEngineStart, 1, false);
+			if (audio_is_playing(sndEngine)){
+				audio_stop_sound(sndEngine)
+			}
+		}
+		else if (speed*9 < 120) and (!audio_is_playing(sndEngineShutdown)) and (!up){
+			audio_play_sound(sndEngineShutdown, 1, false);
+			if (audio_is_playing(sndEngine)){
+				audio_stop_sound(sndEngine)
+			}
+		}
+		if (speed*9 > 120) and (!audio_is_playing(sndEngine)){
+			audio_play_sound(sndEngine,1,true);
+			if (audio_is_playing(sndEngineStart)){
+				audio_stop_sound(sndEngineStart)
+			}
+			if (audio_is_playing(sndEngineShutdown)){
+				audio_stop_sound(sndEngineShutdown)
+			}
+		}
+	}
+	else {
+		if (audio_is_playing(sndEngine)){
+			audio_stop_sound(sndEngine)
+		}
+		if (audio_is_playing(sndEngineStart)){
+			audio_stop_sound(sndEngineStart)
+		}
+		if (audio_is_playing(sndEngineShutdown)){
+			audio_stop_sound(sndEngineShutdown)
+		}
 	}
 
 	//forward and backward movement

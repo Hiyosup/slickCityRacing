@@ -45,21 +45,21 @@ with (objPlayer1){
 if (instance_exists(objPlayer2))and(instance_exists(objCheckpoint)){
 	with (instance_nearest(objPlayer2.x, objPlayer2.y, objCheckpoint)){
 		if (place_meeting(x,y, objPlayer2)){
-			global.P1Chck = true;	
+			global.P2Chck = true;	
 		}
 	}
 }
 if (instance_exists(objPlayer2))and(instance_exists(obj_Checkpoint1)){
 	with (instance_nearest(objPlayer2.x, objPlayer2.y, obj_Checkpoint1)){
 		if (place_meeting(x,y, objPlayer2)){
-			global.P1Chck1 = true;			
+			global.P2Chck1 = true;			
 		}			
 	}
 }
 if (instance_exists(objPlayer2))and(instance_exists(obj_Checkpoint2)){
 	with (instance_nearest(objPlayer2.x, objPlayer2.y, obj_Checkpoint2)){
 		if (place_meeting(x,y, objPlayer2)){
-			global.P1Chck2 = true;			
+			global.P2Chck2 = true;			
 		}
 	}
 }

@@ -7,11 +7,11 @@
     "HTile": false,
     "VTile": false,
     "bbox_bottom": 63,
-    "bbox_left": 16,
-    "bbox_right": 47,
+    "bbox_left": 0,
+    "bbox_right": 63,
     "bbox_top": 0,
-    "bboxmode": 2,
-    "colkind": 1,
+    "bboxmode": 1,
+    "colkind": 2,
     "coltolerance": 0,
     "edgeFiltering": false,
     "frames": [
@@ -58,7 +58,7 @@
             "isLocked": false,
             "name": "pilot",
             "opacity": 100,
-            "visible": false
+            "visible": true
         },
         {
             "id": "9414e57b-174a-459d-af59-29472d2bb478",
