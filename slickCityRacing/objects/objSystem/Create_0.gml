@@ -5,6 +5,8 @@ global.player1Speed = 0;
 global.player2Speed = 0;
 
 //Vehicle select
+global.numberSelect = false;
+global.playerNumber = 0;
 global.player1 = 0;
 global.player2 = 0;
 

@@ -38,3 +38,7 @@ switch (global.player2){
 		sprite_index = sprCardinal;
 		break;
 }
+
+if (global.playerNumber == 0){
+	instance_destroy();
+}

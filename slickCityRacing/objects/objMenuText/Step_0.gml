@@ -8,9 +8,7 @@ if (keyboard_check_pressed(vk_down)){
 
 if (keyboard_check_pressed(vk_enter)){
 	if (image_index == 0){
-		instance_create_layer(x, y,"Text",objVehicleSelect);
-		instance_create_layer(x, y, "HText", objSelectP1);
-		instance_create_layer(x, y, "HText", objSelectP2);
+		global.numberSelect = true;
 		instance_destroy();
 	}
 	if (image_index == 1){

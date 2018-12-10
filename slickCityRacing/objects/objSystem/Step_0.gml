@@ -98,4 +98,14 @@ if (room != rmMain){
 	if (audio_is_playing(sndMenu)){
 		audio_stop_sound(sndMenu)
 	}
+	if (global.playerNumber == 0){
+		view_visible[0] = false;
+		view_visible[1] = false;
+		view_visible[2] = true;
+	}
+	if (global.playerNumber == 1){
+		view_visible[0] = true;
+		view_visible[1] = true;
+		view_visible[2] = false;
+	}
 }
