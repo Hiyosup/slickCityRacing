@@ -130,6 +130,22 @@ switch (room){
 		}
 		break;
 }
+if (keyboard_check_pressed(ord("P"))){
+	p1Finished = true;
+	p2Finished = true;
+}
+if (p1Finished == true) and (p2Finished == true) and (room != rmMain){
+	p1Finished = false;
+	p2Finished = false;
+	global.hour = 0;
+	global.minute = 0;
+	global.second = 0;
+	room_goto(rmMain);
+}
+if (room == rmMain) and (!instance_exists(objPixelForge)) and (!instance_exists(objGMS2Splash)) and (!instance_exists(objSAESplash)) and (!instance_exists(objMenu)) and (!instance_exists(objMenuText)){
+	instance_create_layer(0, 0,"Instances", objMenu);
+	instance_create_layer(0, 0, "Text", objMenuText);
+}
 
 if (!instance_exists(objMenuText)) and (instance_exists(objMenu)) and (!instance_exists(objVehicleSelect)){
 	if (optionInitialize < 1){
@@ -172,7 +188,7 @@ if (!instance_exists(objMenuText)) and (instance_exists(objMenu)) and (!instance
 			}
 		}
 		
-		if (soundOn == true){
+		if (soundOn == "Yes"){
 			audio_master_gain(1);
 		}
 		else {

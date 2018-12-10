@@ -72,3 +72,16 @@ with (objPlayer2){
 		global.P2Chck2 = false;
 	}
 }
+
+if (room == rmMain){
+	if (!audio_is_playing(sndMenu)){
+		audio_play_sound(sndMenu, 1, true)
+	}
+	
+	if (keyboard_check_pressed(vk_down)){
+		audio_play_sound(sndMenuMove, 1, false)
+	}
+	if (keyboard_check_pressed(vk_up)){
+		audio_play_sound(sndMenuMove, 1, false)
+	}
+}
