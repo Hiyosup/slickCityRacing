@@ -58,7 +58,7 @@
             "isLocked": false,
             "name": "pilot",
             "opacity": 100,
-            "visible": false
+            "visible": true
         },
         {
             "id": "565250da-1b59-4b88-9c5c-deee2841262f",

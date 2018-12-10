@@ -22,18 +22,18 @@ if (image_alpha == 1){
 		//sound
 		if (speed*9 < 120) and (!audio_is_playing(sndEngineStart)) and (up){
 			audio_play_sound(sndEngineStart, 1, false);
-			if (audio_is_playing(sndEngine)){
-				audio_stop_sound(sndEngine)
+			if (audio_is_playing(sndEnginev2)){
+				audio_stop_sound(sndEnginev2)
 			}
 		}
 		else if (speed*9 < 120) and (!audio_is_playing(sndEngineShutdown)) and (!up){
 			audio_play_sound(sndEngineShutdown, 1, false);
-			if (audio_is_playing(sndEngine)){
-				audio_stop_sound(sndEngine)
+			if (audio_is_playing(sndEnginev2)){
+				audio_stop_sound(sndEnginev2)
 			}
 		}
-		if (speed*9 > 120) and (!audio_is_playing(sndEngine)){
-			audio_play_sound(sndEngine,1,true);
+		if (speed*9 > 120) and (!audio_is_playing(sndEnginev2)){
+			audio_play_sound(sndEnginev2,1,true);
 			if (audio_is_playing(sndEngineStart)){
 				audio_stop_sound(sndEngineStart)
 			}
