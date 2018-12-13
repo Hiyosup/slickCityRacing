@@ -6,10 +6,10 @@ if (image_alpha != 1){
 }
 if (image_alpha == 1){
 	//inputs
-	up = keyboard_check(ord("W"));
-	down = keyboard_check(ord("S"));
-	left = keyboard_check(ord("A"));
-	right = keyboard_check(ord("D"));
+	up = keyboard_check(vk_numpad3);
+	down = keyboard_check(vk_down);
+	left = keyboard_check(vk_left);
+	right = keyboard_check(vk_right);
 
 	//active variables
 	movement = up - down;
@@ -20,10 +20,20 @@ if (image_alpha == 1){
 	//turning
 	if (speed != 0){
 		if (turning == 1){
-			image_angle += (speed / 3);
+			if (speed <= topSpeed/2){
+				image_angle += (speed / 3);
+			}
+			else {
+				image_angle += (speed / 5.5);
+			}
 		}
 		else if (turning == -1){
-			image_angle -= (speed / 3);
+			if (speed <= topSpeed/2){
+				image_angle -= (speed / 3);
+			}
+			else {
+				image_angle -= (speed / 5.5);
+			}
 		}
 		//sound
 		if (speed*9 < 120) and (speed*9 > -45) and (audio_is_paused(engineStart)){
@@ -110,11 +120,11 @@ if (image_alpha == 1){
 		frict = .55;
 	}
 
-	if (speed <= -10){
+	if (speed <= -(topSpeed/2)){
 		frict = .55;
 	}
 
-	if (speed < topSpeed) and (speed > -10){
+	if (speed < topSpeed) and (speed > -(topSpeed/2)){
 		frict = .075;
 	}
 

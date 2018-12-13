@@ -1,12 +1,12 @@
-if (keyboard_check_pressed(ord("D"))){
+if (keyboard_check_pressed(vk_right)){
 	image_index += 1
 }
 
-if (keyboard_check_pressed(ord("A"))){
+if (keyboard_check_pressed(vk_left)){
 	image_index -= 1
 }
 
-if (keyboard_check_pressed(ord("W")) or keyboard_check_pressed(ord("S"))){
+if (keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_down)){
 	image_index += 3
 }
 

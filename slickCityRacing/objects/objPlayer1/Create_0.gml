@@ -1,13 +1,13 @@
 //Initial variables
 movement = 0;
 turning = 0;
-acceleration = .5;
-backAccel = .3;
-topSpeed = 20;
+acceleration = .15;
+backAccel = .15;
+topSpeed = 16;
 frict = .075;
 vSlide = 0;
 hSlide = 0;
-bounceAngle = 45;
+bounceAngle = 15;
 bounceDistance = 32;
 
 //Vehicle color
