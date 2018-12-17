@@ -4,9 +4,15 @@ if (image_alpha != 1){
 	audio_pause_sound(engineStop);
 	audio_pause_sound(engineBackward);
 }
+
+difference = image_angle - (-camera_get_view_angle(view_camera[1]));
+
+camera_set_view_angle(view_camera[1], (camera_get_view_angle(view_camera[1]))- difference/150);
+
+
 if (image_alpha == 1){
 	//inputs
-	up = keyboard_check(vk_numpad3);
+	up = keyboard_check(vk_numpad3) or keyboard_check(vk_up);
 	down = keyboard_check(vk_down);
 	left = keyboard_check(vk_left);
 	right = keyboard_check(vk_right);
@@ -20,16 +26,22 @@ if (image_alpha == 1){
 	//turning
 	if (speed != 0){
 		if (turning == 1){
-			if (speed <= topSpeed/2){
-				image_angle += (speed / 3);
+			if (speed <= (topSpeed/4)){
+				image_angle += (speed / 1.5);
+			}
+			else if (speed <= (topSpeed/4)*3){
+				image_angle += (speed / 3.5);
 			}
 			else {
 				image_angle += (speed / 5.5);
 			}
 		}
 		else if (turning == -1){
-			if (speed <= topSpeed/2){
-				image_angle -= (speed / 3);
+			if (speed <= (topSpeed/4)){
+				image_angle -= (speed / 1.5);
+			}
+			else if (speed <= (topSpeed/4)*3){
+				image_angle -= (speed / 3.5);
 			}
 			else {
 				image_angle -= (speed / 5.5);

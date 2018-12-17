@@ -1,8 +1,8 @@
-if (keyboard_check_pressed(vk_up)){
+if (keyboard_check_pressed(vk_up)) or (keyboard_check_pressed(ord("W"))){
 	image_index -= 1;
 }
 
-if (keyboard_check_pressed(vk_down)){
+if (keyboard_check_pressed(vk_down)) or (keyboard_check_pressed(ord("S"))){
 	image_index += 1;
 }
 
