@@ -4,12 +4,24 @@ if (image_alpha != 1){
 	audio_pause_sound(engineStop);
 	audio_pause_sound(engineBackward);
 }
+difference = image_angle - (-camera_get_view_angle(view_camera[0]));
+
+camera_set_view_angle(view_camera[0], (camera_get_view_angle(view_camera[0]))- difference/150);
+camera_set_view_angle(view_camera[2], (camera_get_view_angle(view_camera[0]))- difference/150);
+
 if (image_alpha == 1){
 	//inputs
-	up = keyboard_check(vk_up);
-	down = keyboard_check(vk_down);
-	left = keyboard_check(vk_left);
-	right = keyboard_check(vk_right);
+	up = keyboard_check(vk_space) or keyboard_check(ord("W"));
+	down = keyboard_check(ord("S"));
+	left = keyboard_check(ord("A"));
+	right = keyboard_check(ord("D"));
+	
+	if (global.playerNumber == 0){
+		up = keyboard_check(vk_numpad3) or keyboard_check(vk_up) or keyboard_check(vk_space) or keyboard_check(ord("W"));
+		down = keyboard_check(vk_down) or keyboard_check(ord("S"));
+		left = keyboard_check(vk_left) or keyboard_check(ord("A"));
+		right = keyboard_check(vk_right) or keyboard_check(ord("D"));
+	}
 
 	//active variables
 	movement = up - down;
@@ -20,10 +32,26 @@ if (image_alpha == 1){
 	//turning
 	if (speed != 0){
 		if (turning == 1){
-			image_angle += (speed / 3);
+			if (speed <= (topSpeed/4)){
+				image_angle += (speed / 1.5);
+			}
+			else if (speed <= (topSpeed/4)*3){
+				image_angle += (speed / 3.5);
+			}
+			else {
+				image_angle += (speed / 5.5);
+			}
 		}
 		else if (turning == -1){
-			image_angle -= (speed / 3);
+			if (speed <= (topSpeed/4)){
+				image_angle -= (speed / 1.5);
+			}
+			else if (speed <= (topSpeed/4)*3){
+				image_angle -= (speed / 3.5);
+			}
+			else {
+				image_angle -= (speed / 5.5);
+			}
 		}
 		//sound
 		if (speed*9 < 120) and (speed*9 > -45) and (audio_is_paused(engineStart)){
@@ -110,11 +138,11 @@ if (image_alpha == 1){
 		frict = .55;
 	}
 
-	if (speed <= -10){
+	if (speed <= -(topSpeed/2)){
 		frict = .55;
 	}
 
-	if (speed < topSpeed) and (speed > -10){
+	if (speed < topSpeed) and (speed > -(topSpeed/2)){
 		frict = .075;
 	}
 

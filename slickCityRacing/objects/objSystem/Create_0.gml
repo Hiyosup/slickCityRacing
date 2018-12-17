@@ -1,5 +1,10 @@
 global.raceStarting = 0;
 goSaid = false;
+window_set_cursor(cr_none);
+
+if (!window_get_fullscreen()){
+	window_set_fullscreen(true)
+}
 
 //Speedometer
 global.player1Speed = 0;
@@ -39,7 +44,7 @@ global.P2Chck = false;
 global.P2Chck1 = false;
 global.P2Chck2 =false;
 
-global.maxLaps = 1;
+global.maxLaps = 3;
 
 //timer
 global.hour = 0;

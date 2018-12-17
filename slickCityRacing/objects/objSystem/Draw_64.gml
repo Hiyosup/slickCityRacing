@@ -234,10 +234,10 @@ if (!instance_exists(objMenuText)) and (instance_exists(objMenu)) and (!instance
 		optionSelect = 0
 	}
 	draw_set_halign(fa_center);
-	if (keyboard_check_pressed(vk_down)){
+	if (keyboard_check_pressed(vk_down)) or (keyboard_check_pressed(ord("S"))){
 		optionSelect += 1
 	}
-	if (keyboard_check_pressed(vk_up)){
+	if (keyboard_check_pressed(vk_up)) or (keyboard_check_pressed(ord("W"))){
 		optionSelect -= 1
 	}
 	if (creditsOn == false){
@@ -309,10 +309,10 @@ else if (!instance_exists(objMenuText)) and (instance_exists(objMenu)) and (!ins
 		optionSelect = 0
 	}
 	draw_set_halign(fa_center);
-	if (keyboard_check_pressed(vk_down)){
+	if (keyboard_check_pressed(vk_down)) or (keyboard_check_pressed(ord("S"))){
 		optionSelect += 1
 	}
-	if (keyboard_check_pressed(vk_up)){
+	if (keyboard_check_pressed(vk_up)) or (keyboard_check_pressed(ord("W"))){
 		optionSelect -= 1
 	}
 	if (optionSelect = 0){
