@@ -26,7 +26,7 @@ vxw = camera_get_view_width(view_camera[0]);
 vyh = camera_get_view_height(view_camera[0]);
 
 if (room = rmMain){
-	instance_create_layer(room_width/2, room_height/2, "Text", objPixelForge)
+	instance_create_layer(room_width/2, room_height/2, "Text", objGMS2Splash)
 }
 
 optionSelect = 0;
