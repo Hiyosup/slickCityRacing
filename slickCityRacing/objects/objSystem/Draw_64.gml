@@ -205,6 +205,8 @@ if (p1Finished == true) and (p2Finished == true) and (room != rmMain){
 	global.second = 0;
 	optionInitialize = 0;
 	goSaid = false;
+	global.P1lap = 0;
+	global.P2Lap = 0;
 	room_goto(rmMain);
 }
 if (p1Finished == true) and (global.playerNumber == 0) and (room != rmMain){
