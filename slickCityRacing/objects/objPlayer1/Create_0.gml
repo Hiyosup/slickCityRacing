@@ -15,27 +15,33 @@ switch (global.player1){
 	case (0):
 		sprite_index = sprEagle;
 		show_debug_message("Eagle")
+		streak = 0;
 		break;
 	
 	case (1):
 		sprite_index = sprRaven;
 		show_debug_message("Raven")
+		streak = 1;
 		break;
 	
 	case (2):
 		sprite_index = sprSwan;
+		streak = 0;
 		break;
 	
 	case (3):
 		sprite_index = sprParakeet;
+		streak = 1;
 		break;
 	
 	case (4):
 		sprite_index = sprOriole;
+		streak = 2;
 		break;
 	
 	case (5):
 		sprite_index = sprCardinal;
+		streak = 1;
 		break;
 }
 

@@ -22,6 +22,27 @@ if (image_alpha == 1){
 		left = keyboard_check(vk_left) or keyboard_check(ord("A"));
 		right = keyboard_check(vk_right) or keyboard_check(ord("D"));
 	}
+	
+	//streak
+	switch(streak){
+		case(0):
+		instance_create_layer(x+irandom_range(-4, 4), y+irandom_range(-4, 4), "BottomDecorLayer1", objStreakBlue);
+		instance_create_layer(x+irandom_range(-4, 4), y+irandom_range(-4, 4), "BottomDecorLayer1", objStreakBlue);
+		instance_create_layer(x+irandom_range(-4, 4), y+irandom_range(-4, 4), "BottomDecorLayer1", objStreakBlue);
+		break;
+		
+		case(1):
+		instance_create_layer(x+irandom_range(-4, 4), y+irandom_range(-4, 4), "BottomDecorLayer1", objStreakPink);
+		instance_create_layer(x+irandom_range(-4, 4), y+irandom_range(-4, 4), "BottomDecorLayer1", objStreakPink);
+		instance_create_layer(x+irandom_range(-4, 4), y+irandom_range(-4, 4), "BottomDecorLayer1", objStreakPink);
+		break;
+		
+		case(2):
+		instance_create_layer(x+irandom_range(-4, 4), y+irandom_range(-4, 4), "BottomDecorLayer1", objStreakGreen);
+		instance_create_layer(x+irandom_range(-4, 4), y+irandom_range(-4, 4), "BottomDecorLayer1", objStreakGreen);
+		instance_create_layer(x+irandom_range(-4, 4), y+irandom_range(-4, 4), "BottomDecorLayer1", objStreakGreen);
+		break;
+	}
 
 	//active variables
 	movement = up - down;
