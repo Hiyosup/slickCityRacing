@@ -2,14 +2,15 @@ switch (room){
 	case (rmTrack1):
 		draw_set_halign(fa_left);
 		if (global.playerNumber == 0){
-			draw_text_color(vx, vy + (vyh) - 64, "Speed: " + string(global.player1Speed), $FF99FF, $FF99FF, $FF99FF, $FF99FF, 1)
-			draw_text(vx, vy + (vyh) - 96, "Lap: " + string(global.P1lap));
+			draw_text_color(vx, vy + (vyh) - 80, "Speed: " + string(global.player1Speed), $FF99FF, $FF99FF, $FF99FF, $FF99FF, 1)
+			draw_text(vx, vy + (vyh) - 112, "Lap: " + string(global.P1lap));
 		}
 		if (global.playerNumber == 1){
-			draw_text_color(vx, vy + (vyh/2) - 64, "Speed: " + string(global.player1Speed), $FF99FF, $FF99FF, $FF99FF, $FF99FF, 1)
-			draw_text(vx, vy + (vyh/2) - 96, "Lap: " + string(global.P1lap));
-			draw_text_color(vx, vy + (vyh) - 64, "Speed: " + string(global.player2Speed), $FF99FF, $FF99FF, $FF99FF, $FF99FF, 1)
-			draw_text(vx, vy + (vyh) - 96, "Lap: " + string(global.P2lap));
+			draw_text_color(vx, vy + (vyh/2) - 80, "Speed: " + string(global.player1Speed), $FF99FF, $FF99FF, $FF99FF, $FF99FF, 1)
+			draw_text(vx, vy + (vyh/2) - 112, "Lap: " + string(global.P1lap));
+			draw_text_color(vx, vy + (vyh) - 80, "Speed: " + string(global.player2Speed), $FF99FF, $FF99FF, $FF99FF, $FF99FF, 1)
+			draw_text(vx, vy + (vyh) - 112, "Lap: " + string(global.P2lap));
+			draw_sprite(sprDivide,0,vx,vy + (vyh/2));
 		}
 		
 		//starting the race
@@ -60,36 +61,36 @@ switch (room){
 				if (global.minute < 10){
 					if (global.second < 10){
 						if (global.playerNumber == 1){
-							draw_text_color(vx, vy + (vyh/2) - 32, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh/2) - 48, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 						if (global.playerNumber == 0){
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 					}
 					else {
 						if (global.playerNumber == 1){
-							draw_text_color(vx, vy + (vyh/2) - 32, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh/2) - 48, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 						if (global.playerNumber == 0){
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 					}
 				}
 				else {
 					if (global.second < 10){
 						if (global.playerNumber == 1){
-							draw_text_color(vx, vy + (vyh/2) - 32, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh/2) - 48, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 						if (global.playerNumber == 0){
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 					}
 					else {
 						if (global.playerNumber == 1){
-							draw_text_color(vx, vy + (vyh/2) - 32, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh/2) - 48, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 						if (global.playerNumber == 0){
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 					}
 				}
@@ -98,36 +99,36 @@ switch (room){
 				if (global.minute < 10){
 					if (global.second < 10){
 						if (global.playerNumber == 1){
-							draw_text_color(vx, vy + (vyh/2) - 32, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh/2) - 48, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 						if (global.playerNumber == 0){
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 					}
 					else {
 						if (global.playerNumber == 1){
-							draw_text_color(vx, vy + (vyh/2) - 32, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh/2) - 48, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 						if (global.playerNumber == 0){
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 					}
 				}
 				else {
 					if (global.second < 10){
 						if (global.playerNumber == 1){
-							draw_text_color(vx, vy + (vyh/2) - 32, "Timer " + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh/2) - 48, "Timer " + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 						if (global.playerNumber == 0){
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 					}
 					else {
 						if (global.playerNumber == 1){
-							draw_text_color(vx, vy + (vyh/2) - 32, "Timer " + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh/2) - 48, "Timer " + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 						if (global.playerNumber == 0){
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 					}
 				}
@@ -140,43 +141,43 @@ switch (room){
 				p1Second = global.second;
 				p1Finished = true;
 			}
-				draw_text_color(vx, vy + (vyh/2) - 32, "Timer " + string(p1Hour) + ":" + string(p1Minute) + ":" + string(p1Second), c_lime, c_lime, c_lime, c_lime, 1);
+				draw_text_color(vx, vy + (vyh/2) - 48, "Timer " + string(p1Hour) + ":" + string(p1Minute) + ":" + string(p1Second), c_lime, c_lime, c_lime, c_lime, 1);
 		}
 		if (global.playerNumber == 1){
 			if (global.P2lap < global.maxLaps){
 				if (global.hour < 10){
 					if (global.minute < 10){
 						if (global.second < 10){
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 						else {
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + "0" + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 					}
 					else {
 						if (global.second < 10){
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 						else {
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + "0" + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 					}
 				}
 				else {
 					if (global.minute < 10){
 						if (global.second < 10){
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 						else {
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + string(global.hour) + ":0" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 					}
 					else {
 						if (global.second < 10){
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + string(global.hour) + ":" + string(global.minute) + ":0" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 						else {
-							draw_text_color(vx, vy + (vyh) - 32, "Timer " + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
+							draw_text_color(vx, vy + (vyh) - 48, "Timer " + string(global.hour) + ":" + string(global.minute) + ":" + string(global.second), c_lime, c_lime, c_lime, c_lime, 1);
 						}
 					}
 				}
@@ -188,7 +189,7 @@ switch (room){
 					p2Second = global.second;
 					p2Finished = true;
 				}
-					draw_text_color(vx, vy + (vyh) - 32, "Timer " + string(p2Hour) + ":" + string(p2Minute) + ":" + string(p2Second), c_lime, c_lime, c_lime, c_lime, 1);
+					draw_text_color(vx, vy + (vyh) - 48, "Timer " + string(p2Hour) + ":" + string(p2Minute) + ":" + string(p2Second), c_lime, c_lime, c_lime, c_lime, 1);
 			}
 		}
 		break;
