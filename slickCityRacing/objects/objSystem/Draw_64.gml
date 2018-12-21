@@ -3,13 +3,13 @@ switch (room){
 		draw_set_halign(fa_left);
 		if (global.playerNumber == 0){
 			draw_text_color(vx, vy + (vyh) - 80, "Speed: " + string(global.player1Speed), $FF99FF, $FF99FF, $FF99FF, $FF99FF, 1)
-			draw_text(vx, vy + (vyh) - 112, "Lap: " + string(global.P1lap));
+			draw_text(vx, vy + (vyh) - 112, "Lap: " + string(global.P1lap + 1));
 		}
 		if (global.playerNumber == 1){
 			draw_text_color(vx, vy + (vyh/2) - 80, "Speed: " + string(global.player1Speed), $FF99FF, $FF99FF, $FF99FF, $FF99FF, 1)
-			draw_text(vx, vy + (vyh/2) - 112, "Lap: " + string(global.P1lap));
+			draw_text(vx, vy + (vyh/2) - 112, "Lap: " + string(global.P1lap + 1));
 			draw_text_color(vx, vy + (vyh) - 80, "Speed: " + string(global.player2Speed), $FF99FF, $FF99FF, $FF99FF, $FF99FF, 1)
-			draw_text(vx, vy + (vyh) - 112, "Lap: " + string(global.P2lap));
+			draw_text(vx, vy + (vyh) - 112, "Lap: " + string(global.P2lap + 1));
 			draw_sprite(sprDivide,0,vx,vy + (vyh/2));
 		}
 		
@@ -192,7 +192,7 @@ switch (room){
 					draw_text_color(vx, vy + (vyh) - 48, "Timer " + string(p2Hour) + ":" + string(p2Minute) + ":" + string(p2Second), c_lime, c_lime, c_lime, c_lime, 1);
 			}
 		}
-		break;
+	break;
 }
 if (keyboard_check_pressed(ord("P"))){
 	p1Finished = true;
